@@ -1,3 +1,7 @@
+import 'package:eeats/common/view/login.dart';
+import 'package:eeats/component/login_button.dart';
+import 'package:eeats/component/review.dart';
+import 'package:eeats/component/small_review.dart';
 import 'package:eeats/component/text_field.dart';
 import 'package:flutter/material.dart' hide TextField;
 
@@ -11,11 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        textSelectionTheme: TextSelectionThemeData(
+          cursorColor: Color(0xffFF9D8C),
+        )
       ),
-      debugShowCheckedModeBanner: false,
-      home: TextField(),
+      home: Login(),
     );
   }
 }
